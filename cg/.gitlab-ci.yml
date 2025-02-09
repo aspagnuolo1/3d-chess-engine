@@ -1,0 +1,91 @@
+# Build and test computer graphics project
+variables:
+  # `showDateTime` will show the passed time in milliseconds. You need to specify `--batch-mode` to make this work.
+
+stages:
+  - structure
+  - engine
+  - engineTest
+  - client
+  - package
+
+image: gitlab-edu.supsi.ch:5050/dti-isin/labingsw/common:ubuntu2404-cg
+
+structure:
+  stage: structure
+  script:
+    - '[ -d engine ] || exit 1'
+    - '[ -d client ] || exit 1'
+    - '[ -d engineTest ] || exit 1'
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+
+engine:
+  stage: engine
+  before_script:
+    - 'cd engine'
+  script:
+    - 'make clean'
+    - 'make'
+  after_script:
+    - 'cd ..'
+  artifacts:
+    paths:
+      - engine/bin/Release/libengine.so
+      - engine/bin/Debug/libengine.so
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+
+engineTest:
+  stage: engineTest
+  before_script:
+    - 'cd engineTest'
+    - 'export LD_LIBRARY_PATH=../engine/bin/Debug:$LD_LIBRARY_PATH' # Add the engine library path
+  script:
+    - 'make clean'
+    - 'make'
+    - 'bin/Debug/engineTest'  # Run the test executable
+  after_script:
+    - 'cd ..'
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+  dependencies:
+    - engine
+  artifacts:
+    when: always
+    paths:
+      - engineTest/bin/Debug/*
+
+client:
+  stage: client
+  before_script:
+    - 'cd client'
+  script:
+    - 'make clean'
+    - 'make'
+  after_script:
+    - 'cd ..'
+  artifacts:
+    paths:
+      - client/bin/Release/*
+      - client/bin/Debug/*
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+
+
+package:
+  stage: package
+  script:
+    - apt-get update && apt-get install -y zip
+    - mkdir -p package
+    - cp engine/bin/Release/libengine.so package/
+    - cp client/bin/Release/client package/
+    - zip -r distributable.zip package/
+  artifacts:
+    paths:
+      - distributable.zip
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+  dependencies:
+    - engine
+    - client

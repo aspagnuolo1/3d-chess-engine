@@ -1,0 +1,77 @@
+\doxysection{material.\+h}
+\hypertarget{material_8h_source}{}\label{material_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}object.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}texture.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }ENG\_API\ \mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{Material}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object_a8551a38cd9cdc013ef98aa9093e660cf}{Object}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{Material}}(\textcolor{keyword}{const}\ std::string\&\ name,\ glm::vec4\ emission,\ glm::vec4\ ambient,\ glm::vec4\ diffuse,\ glm::vec4\ specular,\ \textcolor{keywordtype}{float}\ shininess\ =\ 0.0f,\ \textcolor{keywordtype}{float}\ transparency=\ 1.0f);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{\string~Material}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_material_a65adfa58fe57bc86bfd673cdeee8c67f}{Material}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{Material}}\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_material_aca11c7ec774c339705edf809bb2a4fbb}{Material}}(\mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{Material}}\&\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{Material}}\&\ \mbox{\hyperlink{class_material_ab247e8a3aaed049b468c430466e6d962}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{Material}}\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{Material}}\&\ \mbox{\hyperlink{class_material_a1251d1092488cb99d3951f6f0cb548ed}{operator=}}(\mbox{\hyperlink{class_material_a26b4c690306adac96021137c2856a99c}{Material}}\&\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_object_ad0677142acbe0d973064aa917adf0e4d}{render}}(glm::mat4\ model\_view)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_acd079c318d67a658a08759b81546856a}{set\_texture}}(\mbox{\hyperlink{class_texture}{Texture}}*\ texture);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_texture}{Texture}}*\ \mbox{\hyperlink{class_material_a343e5bf69f594002c5b283b5882e506a}{get\_texture}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_material_a14952be8d4c733f8145b361afbcce526}{get\_emission}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_material_a13a976bc7db767f39eb4f46c06c3517d}{get\_ambient}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_material_a56ab237483f82ab0c96e7491ab4bcb79}{get\_diffuse}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00125\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_material_acb192f9d33a43f5551fe6a83ecbe6cbe}{get\_specular}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_aceef3424a12c9b53f6f865d2f8eb6447}{set\_emission}}(\textcolor{keyword}{const}\ glm::vec3\&\ emission);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a9f36dc803469ce4d74a0dc11d41d311e}{set\_ambient}}(\textcolor{keyword}{const}\ glm::vec3\&\ ambient);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_af7d9143a476451c51abb467204de2e5b}{set\_diffuse}}(\textcolor{keyword}{const}\ glm::vec3\&\ diffuse);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a2d52447873c3c2cff9c1096f12eb43b2}{set\_specular}}(\textcolor{keyword}{const}\ glm::vec3\&\ specular);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a736f25729f94ac406b1737f658c188db}{set\_shininess}}(\textcolor{keywordtype}{float}\ shininess);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_material_a2dbd3753a0947b2da0522d0a58e535f5}{get\_shininess}}();}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_material_a0e015d06789a19f2a1e0fe29032c4e74}{get\_transparency}}();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_material_a167d06dfc95bbcdc27fa4789918031df}{set\_transparency}}(\textcolor{keywordtype}{float}\ transparency);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_material_a91a6b0769e828fc9c4f21f1d9f8b35a8}{m\_emission}};}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00199\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_material_ab3b04455ca3a29eea275fe5dd6f70b9b}{m\_ambient}};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00207\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_material_a4655998d1721cb070f1e4f92d0dbc239}{m\_diffuse}};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00215\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_material_a472d9632e7e9db1e9d6db0e5a40a4cc3}{m\_specular}};}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_material_ac6870095f155d023adb9fa1d02f9be4c}{m\_shininess}};}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_material_aa82f1d76b648c0fb03dd820ea472c2b1}{m\_transparency}};}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00239\ \ \ \ \ \mbox{\hyperlink{class_texture}{Texture}}*\ \mbox{\hyperlink{class_material_a5c03a7d19041a2d34dd0a27583695081}{m\_texture}};}
+\DoxyCodeLine{00240\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['material_0',['Material',['../class_material.html#a26b4c690306adac96021137c2856a99c',1,'Material::Material(const std::string &amp;name, glm::vec4 emission, glm::vec4 ambient, glm::vec4 diffuse, glm::vec4 specular, float shininess=0.0f, float transparency=1.0f)'],['../class_material.html#a65adfa58fe57bc86bfd673cdeee8c67f',1,'Material::Material(const Material &amp;o)=delete'],['../class_material.html#aca11c7ec774c339705edf809bb2a4fbb',1,'Material::Material(Material &amp;&amp;o)=delete']]],
+  ['mesh_1',['Mesh',['../class_mesh.html#a77432667b2edd0b56f91de43bc8e67d7',1,'Mesh::Mesh(const std::string &amp;name, glm::mat4 cords, unsigned int faces, unsigned int vertices, Material *material=new Material(&quot;default_material&quot;, glm::vec4(0.0f, 0.0f, 0.0f, 1.0f), glm::vec4(0.2f, 0.2f, 0.2f, 1.0f), glm::vec4(0.8f, 0.8f, 0.8f, 1.0f), glm::vec4(0.5f, 0.5f, 0.5f, 1.0f), 5.0f))'],['../class_mesh.html#a497e06ebaf113b2e857f41669d21f4ca',1,'Mesh::Mesh(const Mesh &amp;o)=delete'],['../class_mesh.html#aebfc14591747e8e39cd2276ab348f630',1,'Mesh::Mesh(Mesh &amp;&amp;o)=delete']]]
+];

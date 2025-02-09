@@ -1,0 +1,12 @@
+ON LINUX:
+
+export LD_LIBRARY_PATH=./
+
+#only if needed
+export LIBGL_ALWAYS_SOFTWARE=true
+export GALLIUM_DRIVER=llvmpipe
+export MESA_GL_VERSION_OVERRIDE=1.1FC
+export MESA_GLSL_VERSION_OVERRIDE=460
+
+
+./client

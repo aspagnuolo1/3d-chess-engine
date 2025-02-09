@@ -1,0 +1,242 @@
+\doxysection{Render\+List Class Reference}
+\hypertarget{class_render_list}{}\label{class_render_list}\index{RenderList@{RenderList}}
+
+
+A class for storing and rendering a list of nodes.  
+
+
+
+
+{\ttfamily \#include $<$list.\+h$>$}
+
+Inheritance diagram for Render\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_render_list}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{Render\+List}} (const std\+::string \&name="{}render\+\_\+list"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_render_list_a8ef75c70126e1d94a6d46d8ce7c12bf8}\label{class_render_list_a8ef75c70126e1d94a6d46d8ce7c12bf8} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Render\+List} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_list_aa51ff6a7c78ddfc170a858792d3ba90e}{Render\+List}} (const \mbox{\hyperlink{class_render_list}{Render\+List}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_list_a2bb6bb15acf4453cf491f15c5d76e7c7}{Render\+List}} (\mbox{\hyperlink{class_render_list}{Render\+List}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_list}{Render\+List}} \& \mbox{\hyperlink{class_render_list_ae8d8142c765d5e5ee55d3d70dde2bcd6}{operator=}} (const \mbox{\hyperlink{class_render_list}{Render\+List}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_render_list}{Render\+List}} \& \mbox{\hyperlink{class_render_list_ab4db41b935a4872b293562fd29fc4bd0}{operator=}} (\mbox{\hyperlink{class_render_list}{Render\+List}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_list_a5385044a4818ddfda93c7413fd603eee}{pass}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}node, glm\+::mat4 parent\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Adds nodes and their transformation matrices to the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_list_a000ad95dd4915bc96067059b4b16e0b6}{render}} (glm\+::mat4 view)
+\begin{DoxyCompactList}\small\item\em Renders all nodes in the current render list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_render_list_a6f692ab357b10aeed7c8b70b47d79a42}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the render list. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{struct_render_node}{Render\+Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_render_list_a2accc647937af59fa2ce80a061b8d791}{get\+\_\+render\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current render list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_a8551a38cd9cdc013ef98aa9093e660cf}{Object}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_af0f7f5956b91b59af9220a9017415cae}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()=0
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_a3d8dc7c67d085a9fcb9a84ca8d0ab2a5}{set\+\_\+object\+\_\+name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_object_aa9a5f1a10d3393f5c469274bf214269a}{get\+\_\+object\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+const unsigned int \mbox{\hyperlink{class_object_aac0eb0ccbd223cbc910962e16de0916b}{get\+\_\+object\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s unique identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_render_list_a26afe61d0cf9cd41131589f537fcccce}{load\+\_\+render\+\_\+node}} (\mbox{\hyperlink{struct_render_node}{Render\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Helper function to add \doxylink{struct_render_node}{Render\+Node} to the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \mbox{\hyperlink{struct_render_node}{Render\+Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_render_list_aa1a3a1e2d26751ca67fb393f58224318}{m\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Contains the list of \doxylink{struct_render_node}{Render\+Node} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_object_a50ff4bf85922f0c8ef5b9fb07e2f5846}{m\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Unique object identifier. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_a8b83c95c705d2c3ba0d081fe1710f48d}{m\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em The name of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{class_object_a0e16e1f8a34b3f086955211be94e542e}{m\+\_\+helper\+\_\+id}} = 0
+\begin{DoxyCompactList}\small\item\em Static helper for generating unique object identifiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for storing and rendering a list of nodes. 
+
+\doxylink{class_render_list}{Render\+List} is a container for {\ttfamily \doxylink{struct_render_node}{Render\+Node}} structures, each representing an object (such as a mesh or light) and its transformation matrix. It provides functionality to manage and render a list of objects (nodes) with their respective transformations in the world space. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}\index{RenderList@{RenderList}!RenderList@{RenderList}}
+\index{RenderList@{RenderList}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{RenderList()}{RenderList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3} 
+ENG\+\_\+\+API Render\+List\+::\+Render\+List (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{ = {\ttfamily "{}render\+\_\+list"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name for the render list (default is "{}render\+\_\+list"{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_render_list_aa51ff6a7c78ddfc170a858792d3ba90e}\index{RenderList@{RenderList}!RenderList@{RenderList}}
+\index{RenderList@{RenderList}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{RenderList()}{RenderList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_render_list_aa51ff6a7c78ddfc170a858792d3ba90e} 
+Render\+List\+::\+Render\+List (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_render_list}{Render\+List}} \&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor. 
+
+Deleted to prevent copying of \doxylink{class_render_list}{Render\+List} instances. \Hypertarget{class_render_list_a2bb6bb15acf4453cf491f15c5d76e7c7}\index{RenderList@{RenderList}!RenderList@{RenderList}}
+\index{RenderList@{RenderList}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{RenderList()}{RenderList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_render_list_a2bb6bb15acf4453cf491f15c5d76e7c7} 
+Render\+List\+::\+Render\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_render_list}{Render\+List}} \&\&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Move constructor. 
+
+Deleted to prevent moving of \doxylink{class_render_list}{Render\+List} instances. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_render_list_a6f692ab357b10aeed7c8b70b47d79a42}\index{RenderList@{RenderList}!clear@{clear}}
+\index{clear@{clear}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_render_list_a6f692ab357b10aeed7c8b70b47d79a42} 
+void ENG\+\_\+\+API Render\+List\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the render list. 
+
+This function removes all nodes from the render list and frees their memory. \Hypertarget{class_render_list_a2accc647937af59fa2ce80a061b8d791}\index{RenderList@{RenderList}!get\_render\_list@{get\_render\_list}}
+\index{get\_render\_list@{get\_render\_list}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{get\_render\_list()}{get\_render\_list()}}
+{\footnotesize\ttfamily \label{class_render_list_a2accc647937af59fa2ce80a061b8d791} 
+std\+::list$<$ \mbox{\hyperlink{struct_render_node}{Render\+Node}} \texorpdfstring{$\ast$}{*} $>$ ENG\+\_\+\+API Render\+List\+::get\+\_\+render\+\_\+list (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current render list. 
+
+\begin{DoxyReturn}{Returns}
+The list of nodes to be rendered. 
+\end{DoxyReturn}
+\Hypertarget{class_render_list_a26afe61d0cf9cd41131589f537fcccce}\index{RenderList@{RenderList}!load\_render\_node@{load\_render\_node}}
+\index{load\_render\_node@{load\_render\_node}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{load\_render\_node()}{load\_render\_node()}}
+{\footnotesize\ttfamily \label{class_render_list_a26afe61d0cf9cd41131589f537fcccce} 
+void ENG\+\_\+\+API Render\+List\+::load\+\_\+render\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_render_node}{Render\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper function to add \doxylink{struct_render_node}{Render\+Node} to the list. 
+
+If the node is a \doxylink{class_light}{Light}, it is added to the front of the list; otherwise, it\textquotesingle{}s added to the back.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The \doxylink{struct_render_node}{Render\+Node} to add to the list. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_render_list_ae8d8142c765d5e5ee55d3d70dde2bcd6}\index{RenderList@{RenderList}!operator=@{operator=}}
+\index{operator=@{operator=}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_render_list_ae8d8142c765d5e5ee55d3d70dde2bcd6} 
+\mbox{\hyperlink{class_render_list}{Render\+List}} \& Render\+List\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_render_list}{Render\+List}} \&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy assignment operator. 
+
+Deleted to prevent assignment of \doxylink{class_render_list}{Render\+List} instances. \Hypertarget{class_render_list_ab4db41b935a4872b293562fd29fc4bd0}\index{RenderList@{RenderList}!operator=@{operator=}}
+\index{operator=@{operator=}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_render_list_ab4db41b935a4872b293562fd29fc4bd0} 
+\mbox{\hyperlink{class_render_list}{Render\+List}} \& Render\+List\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_render_list}{Render\+List}} \&\&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Move assignment operator. 
+
+Deleted to prevent move assignment of \doxylink{class_render_list}{Render\+List} instances. \Hypertarget{class_render_list_a5385044a4818ddfda93c7413fd603eee}\index{RenderList@{RenderList}!pass@{pass}}
+\index{pass@{pass}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{pass()}{pass()}}
+{\footnotesize\ttfamily \label{class_render_list_a5385044a4818ddfda93c7413fd603eee} 
+void ENG\+\_\+\+API Render\+List\+::pass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{glm\+::mat4}]{parent\+\_\+matrix}{}\end{DoxyParamCaption})}
+
+
+
+Adds nodes and their transformation matrices to the list. 
+
+This function recursively traverses the node hierarchy, calling the {\ttfamily \doxylink{class_render_list_a5385044a4818ddfda93c7413fd603eee}{pass()}} method of child nodes. It multiplies the child\textquotesingle{}s matrix by the parent’s matrix and adds the result to the render list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The root node in the hierarchy. \\
+\hline
+{\em parent\+\_\+matrix} & The parent node\textquotesingle{}s final matrix in world coordinates. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_render_list_a000ad95dd4915bc96067059b4b16e0b6}\index{RenderList@{RenderList}!render@{render}}
+\index{render@{render}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_render_list_a000ad95dd4915bc96067059b4b16e0b6} 
+void ENG\+\_\+\+API Render\+List\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{view}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all nodes in the current render list. 
+
+Iterates through all nodes in the list and calls their {\ttfamily \doxylink{class_render_list_a000ad95dd4915bc96067059b4b16e0b6}{render()}} method, passing the camera view matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & The inverse of the camera matrix. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_object_ad0677142acbe0d973064aa917adf0e4d}{Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_render_list_aa1a3a1e2d26751ca67fb393f58224318}\index{RenderList@{RenderList}!m\_list@{m\_list}}
+\index{m\_list@{m\_list}!RenderList@{RenderList}}
+\doxysubsubsection{\texorpdfstring{m\_list}{m\_list}}
+{\footnotesize\ttfamily \label{class_render_list_aa1a3a1e2d26751ca67fb393f58224318} 
+std\+::list$<$\mbox{\hyperlink{struct_render_node}{Render\+Node}}\texorpdfstring{$\ast$}{*}$>$ Render\+List\+::m\+\_\+list\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Contains the list of \doxylink{struct_render_node}{Render\+Node} objects. 
+
+This is the container for the render nodes (objects and their transformation matrices). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+list.\+h\item 
+list.\+cpp\end{DoxyCompactItemize}

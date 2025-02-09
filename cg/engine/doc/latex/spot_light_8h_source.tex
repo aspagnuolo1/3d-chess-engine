@@ -1,0 +1,32 @@
+\doxysection{spot\+Light.\+h}
+\hypertarget{spot_light_8h_source}{}\label{spot_light_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \#INCLUDE\ //}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Base\ class\ include}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}attenuationLight.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }ENG\_API\ \mbox{\hyperlink{class_spot_light_a39330f49a0f079d6adb1039583701c0c}{SpotLight}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_attenuation_light_ad9255ead9ed9688542493e15c33eb3ca}{AttenuationLight}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_spot_light_a39330f49a0f079d6adb1039583701c0c}{SpotLight}}(\textcolor{keyword}{const}\ std::string\&\ name,\ glm::mat4\ model\_view,\ glm::vec3\ ambient,\ glm::vec3\ diffuse,\ glm::vec3\ specular,\ glm::vec3\ direction,\ \textcolor{keywordtype}{float}\ constant\_att\ =\ 1.0f,\ \textcolor{keywordtype}{float}\ linear\_att\ =\ 0.0f,\ \textcolor{keywordtype}{float}\ quadratic\_att\ =\ 0.0f,\ \textcolor{keywordtype}{float}\ cutoff\ =\ 15.0f);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_attenuation_light_a7f359bc37dcd2c91d2dad14b7a3859f1}{render}}(glm::mat4\ model\_view)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_spot_light_a17e42ec8d7d4c1f23a9e23c90971846c}{get\_direction}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_spot_light_aa0bc2aa06ee7e69b86340e743ec1f6a9}{set\_direction}}(\textcolor{keyword}{const}\ glm::vec3\&\ direction);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_spot_light_a25b01636b8c16a9002ba48658dfc82f8}{get\_cutoff}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_spot_light_ab1964dcdba91e18f4dd2e2a19ff79c08}{set\_cutoff}}(\textcolor{keywordtype}{float}\ cutoff);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00082\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_spot_light_aeb4862a60780731c3582533b38862105}{m\_direction}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_spot_light_a8b0ff306977e3bd9da0301894a934320}{m\_cutoff}};}
+\DoxyCodeLine{00091\ \};}
+
+\end{DoxyCode}

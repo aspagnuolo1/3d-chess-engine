@@ -1,0 +1,287 @@
+\doxysection{Texture2D Class Reference}
+\hypertarget{class_texture2_d}{}\label{class_texture2_d}\index{Texture2D@{Texture2D}}
+
+
+Derived class for managing 2D textures.  
+
+
+
+
+{\ttfamily \#include $<$texture2\+D.\+h$>$}
+
+Inheritance diagram for Texture2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_texture2_d}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}} (const std\+::string \&name, const std\+::string \&file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture2_d_a8294a80c2d8c3dc2312c9bd36b6b8f2e}{\texorpdfstring{$\sim$}{\string~}\+Texture2D}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture2_d_a4ab40ed1bc768f98a052fc8add9d8a21}{Texture2D}} (const \mbox{\hyperlink{class_texture2_d}{Texture2D}} \&t)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture2_d}{Texture2D}} \& \mbox{\hyperlink{class_texture2_d_ac8fe46ff766a1c445a9354c1a18a6b2d}{operator=}} (const \mbox{\hyperlink{class_texture2_d}{Texture2D}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture2_d_ab4955bd2a3766c2d5b4d4822a0db2a0d}{Texture2D}} (\mbox{\hyperlink{class_texture2_d}{Texture2D}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture2_d}{Texture2D}} \& \mbox{\hyperlink{class_texture2_d_a936dfdea060f24a36975c0a58afcb8aa}{operator=}} (\mbox{\hyperlink{class_texture2_d}{Texture2D}} \&\&t)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_texture2_d_a6ccba65b353359fb2a09365d7a40d745}{render}} (glm\+::mat4 model\+\_\+view) override
+\begin{DoxyCompactList}\small\item\em Render the 2D texture. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_texture2_d_a21f70cd3c3167bba6b844a2227139a11}{load\+\_\+texture}} (unsigned int texture\+\_\+id) override
+\begin{DoxyCompactList}\small\item\em Load the 2D texture from the specified file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_texture}{Texture}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_texture_ad844373238930d60747526db8df6d20e}{Texture}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_texture_aa6c34e4b77dcbd6cdd888a4431133116}{\texorpdfstring{$\sim$}{\string~}\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_ac587179605244b2c0f760d47b6bcf331}{Texture}} (const \mbox{\hyperlink{class_texture}{Texture}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_a48c3ebeea002018a94a77608962abe3d}{Texture}} (\mbox{\hyperlink{class_texture}{Texture}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture}{Texture}} \& \mbox{\hyperlink{class_texture_a55a0732fca9f2777bf2296f01b946b4b}{operator=}} (const \mbox{\hyperlink{class_texture}{Texture}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture}{Texture}} \& \mbox{\hyperlink{class_texture_a495876687888470ce29d2255ba2d18a6}{operator=}} (\mbox{\hyperlink{class_texture}{Texture}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a912f770b20a349df990328d2cfb4f780}{set\+\_\+filter}} (Filter f, Texture\+Mipmap m=Texture\+Mipmap\+::\+DISABLE)
+\begin{DoxyCompactList}\small\item\em Set texture filtering and mipmap options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a8e610e6b2ca4c548bffc227336c3a853}{set\+\_\+texture\+\_\+wrap}} (Texture\+Wrap wrap)
+\begin{DoxyCompactList}\small\item\em Set texture wrapping mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a60636ebd696824916a3f865829dfb09d}{set\+\_\+anisotropic\+\_\+level}} (unsigned int level)
+\begin{DoxyCompactList}\small\item\em Set the anisotropic filtering level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_a8551a38cd9cdc013ef98aa9093e660cf}{Object}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_af0f7f5956b91b59af9220a9017415cae}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()=0
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_a3d8dc7c67d085a9fcb9a84ca8d0ab2a5}{set\+\_\+object\+\_\+name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_object_aa9a5f1a10d3393f5c469274bf214269a}{get\+\_\+object\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+const unsigned int \mbox{\hyperlink{class_object_aac0eb0ccbd223cbc910962e16de0916b}{get\+\_\+object\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s unique identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_texture2_d_ad82f7820bc352363eb8c7c5f4155c689}{generate\+\_\+default\+\_\+texture}} ()
+\begin{DoxyCompactList}\small\item\em Generate a default texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_texture}{Texture}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_texture_a24a6e2edac8f2473e385759643713bf2}{apply\+\_\+filter\+\_\+and\+\_\+mipmap}} () const
+\begin{DoxyCompactList}\small\item\em Apply filtering and mipmap settings to the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_aba55ec1f507a60df31b28563cd506549}{apply\+\_\+texture\+\_\+wrap}} () const
+\begin{DoxyCompactList}\small\item\em Apply texture wrapping mode to the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a84f9d6c5d6e97e6721736124964907d0}{apply\+\_\+anisotropic\+\_\+filter}} () const
+\begin{DoxyCompactList}\small\item\em Apply anisotropic filtering to the texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_texture2_d_add6c2b1733004803da1bcf855318e135}{m\+\_\+file\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em Path to the texture file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_texture}{Texture}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_texture_a9bfb7a233f121cd9edb95003ee802c53}{m\+\_\+texture\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Open\+GL texture ID. \end{DoxyCompactList}\item 
+bool {\bfseries m\+\_\+loaded}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the texture is loaded. \end{DoxyCompactList}\item 
+Filter {\bfseries m\+\_\+filter}
+\begin{DoxyCompactList}\small\item\em Current filtering mode. \end{DoxyCompactList}\item 
+Texture\+Mipmap {\bfseries m\+\_\+mipmap}
+\begin{DoxyCompactList}\small\item\em Current mipmap setting. \end{DoxyCompactList}\item 
+Texture\+Wrap {\bfseries m\+\_\+wrap}
+\begin{DoxyCompactList}\small\item\em Current texture wrapping mode. \end{DoxyCompactList}\item 
+unsigned int {\bfseries m\+\_\+anisotropic\+\_\+level}
+\begin{DoxyCompactList}\small\item\em Level of anisotropic filtering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_object_a50ff4bf85922f0c8ef5b9fb07e2f5846}{m\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Unique object identifier. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_a8b83c95c705d2c3ba0d081fe1710f48d}{m\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em The name of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{class_texture2_d_aff3ac04bc19157e590f712c960e820ce}{m\+\_\+default\+\_\+texture\+\_\+id}} = 0
+\begin{DoxyCompactList}\small\item\em Open\+GL ID for the default texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_texture}{Texture}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_texture}{Texture}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_texture_acdb50771f7bc02b16c512889b066aeb4}{m\+\_\+textures}} \{\}
+\begin{DoxyCompactList}\small\item\em List of all loaded texture objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{class_object_a0e16e1f8a34b3f086955211be94e542e}{m\+\_\+helper\+\_\+id}} = 0
+\begin{DoxyCompactList}\small\item\em Static helper for generating unique object identifiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Derived class for managing 2D textures. 
+
+This class represents a 2D texture, which can be loaded from a file and rendered. It inherits from the base {\ttfamily \doxylink{class_texture}{Texture}} class, implementing the necessary methods for handling the loading and rendering of 2D textures. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}\index{Texture2D@{Texture2D}!Texture2D@{Texture2D}}
+\index{Texture2D@{Texture2D}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{Texture2D()}{Texture2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a} 
+ENG\+\_\+\+API Texture2\+D\+::\+Texture2D (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{const std\+::string \&}]{file\+\_\+path}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Initializes a 2D texture from a specified file path.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the texture. \\
+\hline
+{\em file\+\_\+path} & The path to the texture file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture2_d_a8294a80c2d8c3dc2312c9bd36b6b8f2e}\index{Texture2D@{Texture2D}!````~Texture2D@{\texorpdfstring{$\sim$}{\string~}Texture2D}}
+\index{````~Texture2D@{\texorpdfstring{$\sim$}{\string~}Texture2D}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Texture2D()}{\string~Texture2D()}}
+{\footnotesize\ttfamily \label{class_texture2_d_a8294a80c2d8c3dc2312c9bd36b6b8f2e} 
+ENG\+\_\+\+API Texture2\+D\+::\texorpdfstring{$\sim$}{\string~}\+Texture2D (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Cleans up the 2D texture, freeing any resources associated with it. \Hypertarget{class_texture2_d_a4ab40ed1bc768f98a052fc8add9d8a21}\index{Texture2D@{Texture2D}!Texture2D@{Texture2D}}
+\index{Texture2D@{Texture2D}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{Texture2D()}{Texture2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_texture2_d_a4ab40ed1bc768f98a052fc8add9d8a21} 
+Texture2\+D\+::\+Texture2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_texture2_d}{Texture2D}} \&}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor. 
+
+Deleted to prevent copying of \doxylink{class_texture2_d}{Texture2D} instances. \Hypertarget{class_texture2_d_ab4955bd2a3766c2d5b4d4822a0db2a0d}\index{Texture2D@{Texture2D}!Texture2D@{Texture2D}}
+\index{Texture2D@{Texture2D}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{Texture2D()}{Texture2D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_texture2_d_ab4955bd2a3766c2d5b4d4822a0db2a0d} 
+Texture2\+D\+::\+Texture2D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_texture2_d}{Texture2D}} \&\&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Move constructor. 
+
+Deleted to prevent moving of \doxylink{class_texture2_d}{Texture2D} instances. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_texture2_d_ad82f7820bc352363eb8c7c5f4155c689}\index{Texture2D@{Texture2D}!generate\_default\_texture@{generate\_default\_texture}}
+\index{generate\_default\_texture@{generate\_default\_texture}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{generate\_default\_texture()}{generate\_default\_texture()}}
+{\footnotesize\ttfamily \label{class_texture2_d_ad82f7820bc352363eb8c7c5f4155c689} 
+void ENG\+\_\+\+API Texture2\+D\+::generate\+\_\+default\+\_\+texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Generate a default texture. 
+
+This method creates a default texture when a valid texture file cannot be loaded. This texture could be a simple placeholder (e.\+g., a solid color or checkerboard). \Hypertarget{class_texture2_d_a21f70cd3c3167bba6b844a2227139a11}\index{Texture2D@{Texture2D}!load\_texture@{load\_texture}}
+\index{load\_texture@{load\_texture}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{load\_texture()}{load\_texture()}}
+{\footnotesize\ttfamily \label{class_texture2_d_a21f70cd3c3167bba6b844a2227139a11} 
+void ENG\+\_\+\+API Texture2\+D\+::load\+\_\+texture (\begin{DoxyParamCaption}\item[{unsigned int}]{texture\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Load the 2D texture from the specified file. 
+
+This function implements the texture loading behavior for 2D textures. It loads the texture image from the provided file path into Open\+GL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+\_\+id} & The Open\+GL texture ID to associate with the loaded texture. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_texture_a15f1e7e7a3a9760b2af35247dd2cf287}{Texture}}.
+
+\Hypertarget{class_texture2_d_ac8fe46ff766a1c445a9354c1a18a6b2d}\index{Texture2D@{Texture2D}!operator=@{operator=}}
+\index{operator=@{operator=}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_texture2_d_ac8fe46ff766a1c445a9354c1a18a6b2d} 
+\mbox{\hyperlink{class_texture2_d}{Texture2D}} \& Texture2\+D\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_texture2_d}{Texture2D}} \&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy assignment operator. 
+
+Deleted to prevent assignment of \doxylink{class_texture2_d}{Texture2D} instances. \Hypertarget{class_texture2_d_a936dfdea060f24a36975c0a58afcb8aa}\index{Texture2D@{Texture2D}!operator=@{operator=}}
+\index{operator=@{operator=}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_texture2_d_a936dfdea060f24a36975c0a58afcb8aa} 
+\mbox{\hyperlink{class_texture2_d}{Texture2D}} \& Texture2\+D\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_texture2_d}{Texture2D}} \&\&}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Move assignment operator. 
+
+Deleted to prevent move assignment of \doxylink{class_texture2_d}{Texture2D} instances. \Hypertarget{class_texture2_d_a6ccba65b353359fb2a09365d7a40d745}\index{Texture2D@{Texture2D}!render@{render}}
+\index{render@{render}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_texture2_d_a6ccba65b353359fb2a09365d7a40d745} 
+void ENG\+\_\+\+API Texture2\+D\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{model\+\_\+view}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Render the 2D texture. 
+
+Overrides the base class\textquotesingle{}s render function to handle the specific behavior for rendering a 2D texture. This function must be implemented by derived classes to define how to render the texture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+\_\+view} & The transformation matrix to apply during rendering. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_texture_af94b595247eb2eed0cf8bdcbf2e91417}{Texture}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_texture2_d_aff3ac04bc19157e590f712c960e820ce}\index{Texture2D@{Texture2D}!m\_default\_texture\_id@{m\_default\_texture\_id}}
+\index{m\_default\_texture\_id@{m\_default\_texture\_id}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{m\_default\_texture\_id}{m\_default\_texture\_id}}
+{\footnotesize\ttfamily \label{class_texture2_d_aff3ac04bc19157e590f712c960e820ce} 
+unsigned int Texture2\+D\+::m\+\_\+default\+\_\+texture\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Open\+GL ID for the default texture. 
+
+Stores the Open\+GL texture ID for the default texture. This texture is used when no valid texture can be loaded. \Hypertarget{class_texture2_d_add6c2b1733004803da1bcf855318e135}\index{Texture2D@{Texture2D}!m\_file\_path@{m\_file\_path}}
+\index{m\_file\_path@{m\_file\_path}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{m\_file\_path}{m\_file\_path}}
+{\footnotesize\ttfamily \label{class_texture2_d_add6c2b1733004803da1bcf855318e135} 
+std\+::string Texture2\+D\+::m\+\_\+file\+\_\+path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Path to the texture file. 
+
+Stores the file path where the texture image is located. Used for loading the texture into Open\+GL. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+texture2\+D.\+h\item 
+texture2\+D.\+cpp\end{DoxyCompactItemize}

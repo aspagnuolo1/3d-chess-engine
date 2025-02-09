@@ -1,0 +1,342 @@
+\doxysection{Texture Class Reference}
+\hypertarget{class_texture}{}\label{class_texture}\index{Texture@{Texture}}
+
+
+Abstract class for texture management.  
+
+
+
+
+{\ttfamily \#include $<$texture.\+h$>$}
+
+Inheritance diagram for Texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_texture}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_texture_ad844373238930d60747526db8df6d20e}{Texture}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_texture_aa6c34e4b77dcbd6cdd888a4431133116}{\texorpdfstring{$\sim$}{\string~}\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_ac587179605244b2c0f760d47b6bcf331}{Texture}} (const \mbox{\hyperlink{class_texture}{Texture}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture_a48c3ebeea002018a94a77608962abe3d}{Texture}} (\mbox{\hyperlink{class_texture}{Texture}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture}{Texture}} \& \mbox{\hyperlink{class_texture_a55a0732fca9f2777bf2296f01b946b4b}{operator=}} (const \mbox{\hyperlink{class_texture}{Texture}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_texture}{Texture}} \& \mbox{\hyperlink{class_texture_a495876687888470ce29d2255ba2d18a6}{operator=}} (\mbox{\hyperlink{class_texture}{Texture}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_texture_af94b595247eb2eed0cf8bdcbf2e91417}{render}} (glm\+::mat4 model\+\_\+view) override=0
+\begin{DoxyCompactList}\small\item\em Render the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a912f770b20a349df990328d2cfb4f780}{set\+\_\+filter}} (Filter f, Texture\+Mipmap m=Texture\+Mipmap\+::\+DISABLE)
+\begin{DoxyCompactList}\small\item\em Set texture filtering and mipmap options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a8e610e6b2ca4c548bffc227336c3a853}{set\+\_\+texture\+\_\+wrap}} (Texture\+Wrap wrap)
+\begin{DoxyCompactList}\small\item\em Set texture wrapping mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a60636ebd696824916a3f865829dfb09d}{set\+\_\+anisotropic\+\_\+level}} (unsigned int level)
+\begin{DoxyCompactList}\small\item\em Set the anisotropic filtering level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_a8551a38cd9cdc013ef98aa9093e660cf}{Object}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_af0f7f5956b91b59af9220a9017415cae}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()=0
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_a3d8dc7c67d085a9fcb9a84ca8d0ab2a5}{set\+\_\+object\+\_\+name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_object_aa9a5f1a10d3393f5c469274bf214269a}{get\+\_\+object\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+const unsigned int \mbox{\hyperlink{class_object_aac0eb0ccbd223cbc910962e16de0916b}{get\+\_\+object\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s unique identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_texture_a24a6e2edac8f2473e385759643713bf2}{apply\+\_\+filter\+\_\+and\+\_\+mipmap}} () const
+\begin{DoxyCompactList}\small\item\em Apply filtering and mipmap settings to the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_aba55ec1f507a60df31b28563cd506549}{apply\+\_\+texture\+\_\+wrap}} () const
+\begin{DoxyCompactList}\small\item\em Apply texture wrapping mode to the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_texture_a84f9d6c5d6e97e6721736124964907d0}{apply\+\_\+anisotropic\+\_\+filter}} () const
+\begin{DoxyCompactList}\small\item\em Apply anisotropic filtering to the texture. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_texture_a15f1e7e7a3a9760b2af35247dd2cf287}{load\+\_\+texture}} (unsigned int texture\+\_\+id)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to load the texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_texture_a9bfb7a233f121cd9edb95003ee802c53}{m\+\_\+texture\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Open\+GL texture ID. \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a6bf035d4c00424240669641ba78975fb}\label{class_texture_a6bf035d4c00424240669641ba78975fb} 
+bool {\bfseries m\+\_\+loaded}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the texture is loaded. \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a931d748c1ee7206f95a3b9f3828ba2b1}\label{class_texture_a931d748c1ee7206f95a3b9f3828ba2b1} 
+Filter {\bfseries m\+\_\+filter}
+\begin{DoxyCompactList}\small\item\em Current filtering mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a31d68cd0c627910de879aae250905ef8}\label{class_texture_a31d68cd0c627910de879aae250905ef8} 
+Texture\+Mipmap {\bfseries m\+\_\+mipmap}
+\begin{DoxyCompactList}\small\item\em Current mipmap setting. \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a46ba5ea54e2494148ec715ebdc87a6c7}\label{class_texture_a46ba5ea54e2494148ec715ebdc87a6c7} 
+Texture\+Wrap {\bfseries m\+\_\+wrap}
+\begin{DoxyCompactList}\small\item\em Current texture wrapping mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a943c9ba60e95851490e76d58f7523e92}\label{class_texture_a943c9ba60e95851490e76d58f7523e92} 
+unsigned int {\bfseries m\+\_\+anisotropic\+\_\+level}
+\begin{DoxyCompactList}\small\item\em Level of anisotropic filtering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_object_a50ff4bf85922f0c8ef5b9fb07e2f5846}{m\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Unique object identifier. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_a8b83c95c705d2c3ba0d081fe1710f48d}{m\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em The name of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_texture}{Texture}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_texture_acdb50771f7bc02b16c512889b066aeb4}{m\+\_\+textures}} \{\}
+\begin{DoxyCompactList}\small\item\em List of all loaded texture objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{class_object_a0e16e1f8a34b3f086955211be94e542e}{m\+\_\+helper\+\_\+id}} = 0
+\begin{DoxyCompactList}\small\item\em Static helper for generating unique object identifiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for texture management. 
+
+Provides the base functionality for loading, configuring, and applying textures. Derived classes must implement specific behavior for loading texture data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_texture_ad844373238930d60747526db8df6d20e}\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_texture_ad844373238930d60747526db8df6d20e} 
+ENG\+\_\+\+API Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Initializes the texture with a name
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the texture. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture_aa6c34e4b77dcbd6cdd888a4431133116}\index{Texture@{Texture}!````~Texture@{\texorpdfstring{$\sim$}{\string~}Texture}}
+\index{````~Texture@{\texorpdfstring{$\sim$}{\string~}Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Texture()}{\string~Texture()}}
+{\footnotesize\ttfamily \label{class_texture_aa6c34e4b77dcbd6cdd888a4431133116} 
+ENG\+\_\+\+API Texture\+::\texorpdfstring{$\sim$}{\string~}\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deconstructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_texture}{Texture}} & class decostructor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture_ac587179605244b2c0f760d47b6bcf331}\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_texture_ac587179605244b2c0f760d47b6bcf331} 
+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_texture}{Texture}} \&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor. 
+
+Deleted to prevent copying of \doxylink{class_texture}{Texture} instances. \Hypertarget{class_texture_a48c3ebeea002018a94a77608962abe3d}\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_texture_a48c3ebeea002018a94a77608962abe3d} 
+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_texture}{Texture}} \&\&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Move constructor. 
+
+Deleted to prevent moving of \doxylink{class_texture}{Texture} instances. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_texture_a84f9d6c5d6e97e6721736124964907d0}\index{Texture@{Texture}!apply\_anisotropic\_filter@{apply\_anisotropic\_filter}}
+\index{apply\_anisotropic\_filter@{apply\_anisotropic\_filter}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{apply\_anisotropic\_filter()}{apply\_anisotropic\_filter()}}
+{\footnotesize\ttfamily \label{class_texture_a84f9d6c5d6e97e6721736124964907d0} 
+void ENG\+\_\+\+API Texture\+::apply\+\_\+anisotropic\+\_\+filter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Apply anisotropic filtering to the texture. 
+
+Configures anisotropic filtering based on hardware support and the specified level. \Hypertarget{class_texture_a24a6e2edac8f2473e385759643713bf2}\index{Texture@{Texture}!apply\_filter\_and\_mipmap@{apply\_filter\_and\_mipmap}}
+\index{apply\_filter\_and\_mipmap@{apply\_filter\_and\_mipmap}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{apply\_filter\_and\_mipmap()}{apply\_filter\_and\_mipmap()}}
+{\footnotesize\ttfamily \label{class_texture_a24a6e2edac8f2473e385759643713bf2} 
+void ENG\+\_\+\+API Texture\+::apply\+\_\+filter\+\_\+and\+\_\+mipmap (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Apply filtering and mipmap settings to the texture. 
+
+Updates the Open\+GL texture parameters for filtering and mipmaps. \Hypertarget{class_texture_aba55ec1f507a60df31b28563cd506549}\index{Texture@{Texture}!apply\_texture\_wrap@{apply\_texture\_wrap}}
+\index{apply\_texture\_wrap@{apply\_texture\_wrap}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{apply\_texture\_wrap()}{apply\_texture\_wrap()}}
+{\footnotesize\ttfamily \label{class_texture_aba55ec1f507a60df31b28563cd506549} 
+void ENG\+\_\+\+API Texture\+::apply\+\_\+texture\+\_\+wrap (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Apply texture wrapping mode to the texture. 
+
+Updates the Open\+GL texture parameters for wrapping. \Hypertarget{class_texture_a15f1e7e7a3a9760b2af35247dd2cf287}\index{Texture@{Texture}!load\_texture@{load\_texture}}
+\index{load\_texture@{load\_texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{load\_texture()}{load\_texture()}}
+{\footnotesize\ttfamily \label{class_texture_a15f1e7e7a3a9760b2af35247dd2cf287} 
+virtual void Texture\+::load\+\_\+texture (\begin{DoxyParamCaption}\item[{unsigned int}]{texture\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to load the texture. 
+
+Derived classes must implement this function to load texture data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+\_\+id} & The Open\+GL texture ID. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_texture2_d_a21f70cd3c3167bba6b844a2227139a11}{Texture2D}}.
+
+\Hypertarget{class_texture_a55a0732fca9f2777bf2296f01b946b4b}\index{Texture@{Texture}!operator=@{operator=}}
+\index{operator=@{operator=}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_texture_a55a0732fca9f2777bf2296f01b946b4b} 
+\mbox{\hyperlink{class_texture}{Texture}} \& Texture\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_texture}{Texture}} \&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy assignment operator. 
+
+Deleted to prevent assignment of \doxylink{class_texture}{Texture} instances. \Hypertarget{class_texture_a495876687888470ce29d2255ba2d18a6}\index{Texture@{Texture}!operator=@{operator=}}
+\index{operator=@{operator=}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_texture_a495876687888470ce29d2255ba2d18a6} 
+\mbox{\hyperlink{class_texture}{Texture}} \& Texture\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_texture}{Texture}} \&\&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Move assignment operator. 
+
+Deleted to prevent move assignment of \doxylink{class_texture}{Texture} instances. \Hypertarget{class_texture_af94b595247eb2eed0cf8bdcbf2e91417}\index{Texture@{Texture}!render@{render}}
+\index{render@{render}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_texture_af94b595247eb2eed0cf8bdcbf2e91417} 
+virtual void Texture\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{model\+\_\+view}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Render the texture. 
+
+A pure virtual function that must be implemented by derived classes. Currently, the parameters are placeholders and not used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+\_\+view} & NOT USED. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_object_ad0677142acbe0d973064aa917adf0e4d}{Object}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_texture2_d_a6ccba65b353359fb2a09365d7a40d745}{Texture2D}}.
+
+\Hypertarget{class_texture_a60636ebd696824916a3f865829dfb09d}\index{Texture@{Texture}!set\_anisotropic\_level@{set\_anisotropic\_level}}
+\index{set\_anisotropic\_level@{set\_anisotropic\_level}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{set\_anisotropic\_level()}{set\_anisotropic\_level()}}
+{\footnotesize\ttfamily \label{class_texture_a60636ebd696824916a3f865829dfb09d} 
+void ENG\+\_\+\+API Texture\+::set\+\_\+anisotropic\+\_\+level (\begin{DoxyParamCaption}\item[{unsigned int}]{level}{}\end{DoxyParamCaption})}
+
+
+
+Set the anisotropic filtering level. 
+
+Configures the level of anisotropic filtering applied to the texture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The desired anisotropic filtering level. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture_a912f770b20a349df990328d2cfb4f780}\index{Texture@{Texture}!set\_filter@{set\_filter}}
+\index{set\_filter@{set\_filter}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{set\_filter()}{set\_filter()}}
+{\footnotesize\ttfamily \label{class_texture_a912f770b20a349df990328d2cfb4f780} 
+void ENG\+\_\+\+API Texture\+::set\+\_\+filter (\begin{DoxyParamCaption}\item[{Filter}]{f}{, }\item[{Texture\+Mipmap}]{m}{ = {\ttfamily TextureMipmap\+:\+:DISABLE}}\end{DoxyParamCaption})}
+
+
+
+Set texture filtering and mipmap options. 
+
+Configures the filtering and mipmap settings for the texture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The filtering mode. \\
+\hline
+{\em m} & The mipmap option. Defaults to Texture\+Mipmap\+::\+DISABLE. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture_a8e610e6b2ca4c548bffc227336c3a853}\index{Texture@{Texture}!set\_texture\_wrap@{set\_texture\_wrap}}
+\index{set\_texture\_wrap@{set\_texture\_wrap}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{set\_texture\_wrap()}{set\_texture\_wrap()}}
+{\footnotesize\ttfamily \label{class_texture_a8e610e6b2ca4c548bffc227336c3a853} 
+void ENG\+\_\+\+API Texture\+::set\+\_\+texture\+\_\+wrap (\begin{DoxyParamCaption}\item[{Texture\+Wrap}]{wrap}{}\end{DoxyParamCaption})}
+
+
+
+Set texture wrapping mode. 
+
+Configures how the texture is wrapped for coordinates outside \mbox{[}0, 1\mbox{]}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wrap} & The wrapping mode. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_texture_a9bfb7a233f121cd9edb95003ee802c53}\index{Texture@{Texture}!m\_texture\_id@{m\_texture\_id}}
+\index{m\_texture\_id@{m\_texture\_id}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{m\_texture\_id}{m\_texture\_id}}
+{\footnotesize\ttfamily \label{class_texture_a9bfb7a233f121cd9edb95003ee802c53} 
+unsigned int Texture\+::m\+\_\+texture\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Open\+GL texture ID. 
+
+Stores the unique identifier for the texture in Open\+GL. \Hypertarget{class_texture_acdb50771f7bc02b16c512889b066aeb4}\index{Texture@{Texture}!m\_textures@{m\_textures}}
+\index{m\_textures@{m\_textures}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{m\_textures}{m\_textures}}
+{\footnotesize\ttfamily \label{class_texture_acdb50771f7bc02b16c512889b066aeb4} 
+std\+::vector$<$ \mbox{\hyperlink{class_texture}{Texture}} \texorpdfstring{$\ast$}{*} $>$ ENG\+\_\+\+API Texture\+::m\+\_\+textures \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+List of all loaded texture objects. 
+
+A static vector that holds pointers to all created \doxylink{class_texture}{Texture} instances. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+texture.\+h\item 
+texture.\+cpp\end{DoxyCompactItemize}

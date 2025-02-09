@@ -1,0 +1,40 @@
+\doxysection{texture2\+D.\+h}
+\hypertarget{texture2_d_8h_source}{}\label{texture2_d_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}texture.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }ENG\_API\ \mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_texture_ad844373238930d60747526db8df6d20e}{Texture}}\{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ file\_path);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{\string~Texture2D}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_texture2_d_a4ab40ed1bc768f98a052fc8add9d8a21}{Texture2D}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}}\&\ t)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}}\&\ \mbox{\hyperlink{class_texture2_d_ac8fe46ff766a1c445a9354c1a18a6b2d}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}}\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_texture2_d_ab4955bd2a3766c2d5b4d4822a0db2a0d}{Texture2D}}(\mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}}\&\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}}\&\ \mbox{\hyperlink{class_texture2_d_a936dfdea060f24a36975c0a58afcb8aa}{operator=}}(\mbox{\hyperlink{class_texture2_d_a034d846b4fa590742d638da4c51c1e2a}{Texture2D}}\&\&\ t)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_texture_af94b595247eb2eed0cf8bdcbf2e91417}{render}}(glm::mat4\ model\_view)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_texture_a15f1e7e7a3a9760b2af35247dd2cf287}{load\_texture}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ texture\_id)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \ \ \ \ std::string\ \mbox{\hyperlink{class_texture2_d_add6c2b1733004803da1bcf855318e135}{m\_file\_path}};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture2_d_ad82f7820bc352363eb8c7c5f4155c689}{generate\_default\_texture}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_texture2_d_aff3ac04bc19157e590f712c960e820ce}{m\_default\_texture\_id}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{persp\+Camera.\+h}
+\hypertarget{persp_camera_8h_source}{}\label{persp_camera_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \#INCLUDE\ //}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ Header\ file\ include}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}camera.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ CLASSES\ //}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }ENG\_API\ \mbox{\hyperlink{class_perspective_camera_a227200d44e87d8847ba3e3b032a6b11e}{PerspectiveCamera}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_camera_ad3a30453924c72c0e5b19dbdabfadac5}{Camera}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_perspective_camera_a227200d44e87d8847ba3e3b032a6b11e}{PerspectiveCamera}}(\textcolor{keyword}{const}\ std::string\&\ name,\ glm::mat4\ cords,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keywordtype}{float}\ near,\ \textcolor{keywordtype}{float}\ far,\ \textcolor{keywordtype}{float}\ fov\ =\ 45.0f);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_node_a57e7f9c783994d82f47d4f57c1444756}{render}}(glm::mat4\ model\_view)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_camera_adf22782aaef1d6491f5a3144f8518380}{update\_window\_size}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perspective_camera_a59ddcf1ff0a376fb1ee0745d22d6ee1a}{set\_properties}}(glm::mat4\ properties);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00079\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_perspective_camera_a5f29f09c7090bebb369a54a24e60586c}{get\_inverse\_camera}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_perspective_camera_a2f6fa6eb2f134ce8b416757da7dd8e12}{get\_fov}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_perspective_camera_a5341e3655ec272302c132cbf913b6b86}{set\_fov}}(\textcolor{keywordtype}{float}\ fov);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_fov;}
+\DoxyCodeLine{00106\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,43 @@
+\doxysection{light.\+h}
+\hypertarget{light_8h_source}{}\label{light_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}node.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }ENG\_API\ \mbox{\hyperlink{class_light_a322922083653a6396fab87175bd3c025}{Light}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_node_a1cd4d3cb8e9b12979a2b9f1fcdcd6ee4}{Node}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_a0c8430a833dbdf04c63ceada8d90d1f9}{render}}(glm::mat4\ model\_view)\ =\ 0;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_light_a322922083653a6396fab87175bd3c025}{Light}}(\textcolor{keyword}{const}\ std::string\&\ name,\ glm::mat4\ model\_view,\ glm::vec3\ ambient,\ glm::vec3\ diffuse,\ glm::vec3\ specular);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{class_light_aed99d7c3a95720b24afd775a1ef857e7}{get\_light\_id}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_light_a66ef3ca99aaea8f3c7b437cd1552784f}{get\_ambient}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_ac40b0a7e42d61103d3883f8dd55a7638}{set\_ambient}}(\textcolor{keyword}{const}\ glm::vec3\&\ ambient);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_light_affe6e9c1d9c9d5043cea6b29aa4648a1}{get\_diffuse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_ad56ef23f468186d430dd3316cbef573c}{set\_diffuse}}(\textcolor{keyword}{const}\ glm::vec3\&\ diffuse);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_light_a641a392f75dbe25f4d3baf9b309fda75}{get\_specular}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_af4467de4fc530d061791a54c38bb21d0}{set\_specular}}(\textcolor{keyword}{const}\ glm::vec3\&\ specular);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_light_ad626b5021aafc622df37e53f4285d730}{m\_helper\_light\_id}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_light_a33463e7c070aacfb33f06cd9d5b44d63}{m\_max\_lights}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_light_acb30822bafd1ccba53992bdb62e44d42}{m\_light\_id}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00119\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_light_a871f7899cb20e1a940367465d801ef77}{m\_ambient}};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00127\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_light_a8781d865720c118abc92fca2ed85d6ce}{m\_diffuse}};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00135\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_light_ad378ce1b2de34b0f78d5fdd8ed2ea09e}{m\_specular}};}
+\DoxyCodeLine{00136\ \};}
+
+\end{DoxyCode}

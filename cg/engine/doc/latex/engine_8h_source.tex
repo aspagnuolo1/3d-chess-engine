@@ -1,0 +1,164 @@
+\doxysection{engine.\+h}
+\hypertarget{engine_8h_source}{}\label{engine_8h_source}\mbox{\hyperlink{engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ GLUT\_KEY\_UP\ \ \ \ \ \ \ \ \ \ 101}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ GLUT\_KEY\_DOWN\ \ \ \ \ \ \ \ 103}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ GLUT\_KEY\_LEFT\ \ \ \ \ \ \ \ 100}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ GLUT\_KEY\_RIGHT\ \ \ \ \ \ \ 102}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ GLUT\_CTRL\_L\ \ \ \ \ \ \ \ \ \ 114}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ TAB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 9}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \#INCLUDE\ //}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \textcolor{comment}{//\ C/C++:\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \#include\ <memory>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \#include\ <chrono>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \#include\ <queue>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Main\ library\ include}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}lib.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \#include\ "{}camera.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \#include\ "{}mesh.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \#include\ "{}node.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \#include\ "{}ortoCamera.h"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \#include\ "{}perspCamera.h"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \#include\ "{}object.h"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \#include\ "{}attenuationLight.h"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \#include\ "{}directionalLight.h"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \#include\ "{}light.h"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \#include\ "{}list.h"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \#include\ "{}material.h"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \ \#include\ "{}omnidirectionalLight.h"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \ \ \#include\ "{}spotLight.h"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ \ \#include\ "{}texture.h"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \#include\ "{}ovoreader.h"{}}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ NAMESPACE\ //}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{namespace\ }Eng\ \{}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ \#INCLUDE\ //}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \textcolor{comment}{//\ You\ can\ subinclude\ here\ other\ headers\ of\ your\ engine...}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ MAIN\ ENGINE\ CLASS\ //}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{class\ }ENG\_API\ \mbox{\hyperlink{class_eng_1_1_base_ac9bc36f2293d517cc6f1b2ab348d4f69}{Base}}\ final}
+\DoxyCodeLine{00077\ \{}
+\DoxyCodeLine{00079\ \textcolor{keyword}{public}:\ \textcolor{comment}{//}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \ \mbox{\hyperlink{class_eng_1_1_base_ac9bc36f2293d517cc6f1b2ab348d4f69}{Base}}(\mbox{\hyperlink{class_eng_1_1_base_ac9bc36f2293d517cc6f1b2ab348d4f69}{Base}}\ \textcolor{keyword}{const}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \mbox{\hyperlink{class_eng_1_1_base_ac9bc36f2293d517cc6f1b2ab348d4f69}{\string~Base}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_ac4eb1f66179273abba59260a6b4c5cbd}{operator=}}(\mbox{\hyperlink{class_eng_1_1_base_ac9bc36f2293d517cc6f1b2ab348d4f69}{Base}}\ \textcolor{keyword}{const}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_eng_1_1_base_ac9bc36f2293d517cc6f1b2ab348d4f69}{Base}}\ \&\mbox{\hyperlink{class_eng_1_1_base_a3c21bcd7bace09d5913ced6de5b15518}{getInstance}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00116\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_eng_1_1_base_ad1c3b01c578e4996cf1ab214810eaf31}{init}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height,\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*\ argv[]);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00124\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_eng_1_1_base_afd7e1923deb411907695c0b27114f62a}{free}}();\ \ \ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_af22d0c95d0e1789fe1f4a298c36c0df0}{update}}();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00137\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a4684cbf08ccc9f08cd073977697b4103}{renderScene}}();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_affa14c5db905ab88bc3f65df90ccbb22}{loadScene}}(\mbox{\hyperlink{class_node}{Node}}*\ root);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00153\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_affa14c5db905ab88bc3f65df90ccbb22}{loadScene}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ file\_path,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ texture\_dir);}
+\DoxyCodeLine{00154\ \ \ \ }
+\DoxyCodeLine{00160\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a7e7cdce4faa7cc489e540b00884d57f1}{calculateFPS}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_ad97fb497e7ad0798e31a5ea8b6c06bbb}{registerDisplayCallback}}(\textcolor{keywordtype}{void}\ (*function)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a3d5364151e4745b3a9082808a076bcf4}{registerReshapeCallback}}(\textcolor{keywordtype}{void}\ (*function)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00178\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_aee1757564dd25a4336b22b7d876d0d9c}{registerKeyboardCallback}}(\textcolor{keywordtype}{void}\ (*function)(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00184\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_adf79aaea3f6a5559a7a6af482fcf6288}{registerSpecialCallback}}(\textcolor{keywordtype}{void}\ (*function)(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00190\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a3e999649d5c7863b1eb4aed71b4c1f14}{setCamera}}(\mbox{\hyperlink{class_perspective_camera}{PerspectiveCamera}}*\ camera);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00195\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a53b0560614238baf0a23d19e97e70c0c}{enableFPS}}();}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a6df0b3faf4bf6ad6f6de5e92c244472f}{disableFPS}}();}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00206\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a531e29544f39b7ebfeef1edefd0fb89e}{enableWireFrame}}();}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00211\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_aec3983ea49819064b9c916767a3fbb19}{disableWireFrame}}();}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00217\ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eng_1_1_base_a5408c239abeacdaae65e98180036dcdb}{getWindowHeight}}();}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00223\ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eng_1_1_base_a6ee05cd0df3e571b45939bb2b9f875b4}{getWindowWidth}}();}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00229\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a3a6aee666827bc132310f33f5244c8a1}{printText}}(\textcolor{keyword}{const}\ std::string\&\ text);}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00235\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a5cb90a2415b491d6b77ece11da0aa58a}{addToScene}}(\mbox{\hyperlink{class_node}{Node}}*\ toAdd);}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00241\ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_eng_1_1_base_aa1ea68fe8e5f8072be057e2629dac83d}{getRoot}}();}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00248\ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_af7691aeec7899f251182101f2a6443f8}{reshapeCallback}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00253\ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_a96162111a8d4ce79c3a93988682de9d4}{displayCallback}}();}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00261\ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eng_1_1_base_ae64e202ed12687d49c66b42af729375b}{specialCallback}}(\textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ mouseX,\ \textcolor{keywordtype}{int}\ mouseY);}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00264\ \textcolor{keyword}{private}:\ \textcolor{comment}{//}}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00274\ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_eng_1_1_base_1_1_reserved}{Reserved}};}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00282\ \ \ \ std::unique\_ptr<Reserved>\ reserved;}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00290\ \ \ \ void\ (*reshape\_function)(int,\ int)\ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00297\ \ \ \ void\ (*display\_function)(void)\ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00305\ \ \ \ void\ (*special\_function)(int,\ int,\ int)\ \{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00312\ \ \ \ std::vector<std::string>\ textToRender;}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00319\ \ \ \ PerspectiveCamera*\ camera;}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00326\ \ \ \ OrthographicCamera*\ m\_2d\_camera;}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00333\ \ \ \ Node*\ m\_scene\_graph;}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00340\ \ \ \ RenderList\ m\_render\_list;}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00347\ \ \ \ \textcolor{keywordtype}{int}\ windowId;}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00352\ \ \ \ \textcolor{keywordtype}{float}\ m\_window\_width;}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00357\ \ \ \ \textcolor{keywordtype}{float}\ m\_window\_height;}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ \ \ \ \textcolor{keywordtype}{bool}\ m\_show\_fps;}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00370\ \ \ \ std::chrono::time\_point<std::chrono::steady\_clock>\ lastTime;}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00375\ \ \ \ \textcolor{keywordtype}{int}\ frameCount\ =\ 0;}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00380\ \ \ \ \textcolor{keywordtype}{float}\ fps\ =\ 0.0f;}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00387\ \ \ \ Base();}
+\DoxyCodeLine{00388\ \};}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ \};\ \textcolor{comment}{//\ end\ of\ namespace\ Eng::}}
+\DoxyCodeLine{00391\ }
+
+\end{DoxyCode}

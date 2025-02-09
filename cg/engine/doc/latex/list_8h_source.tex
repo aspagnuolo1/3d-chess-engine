@@ -1,0 +1,53 @@
+\doxysection{list.\+h}
+\hypertarget{list_8h_source}{}\label{list_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}object.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}node.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}light.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}mesh.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}camera.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_render_node}{RenderNode}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_object}{Object}}*\ m\_object;}
+\DoxyCodeLine{00022\ \ \ \ \ glm::mat4\ m\_mat;}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }ENG\_API\ \ \mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{RenderList}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object_a8551a38cd9cdc013ef98aa9093e660cf}{Object}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{RenderList}}(\textcolor{keyword}{const}\ std::string\&\ name\ =\ \textcolor{stringliteral}{"{}render\_list"{}});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{\string~RenderList}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_render_list_aa51ff6a7c78ddfc170a858792d3ba90e}{RenderList}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{RenderList}}\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_render_list_a2bb6bb15acf4453cf491f15c5d76e7c7}{RenderList}}(\mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{RenderList}}\&\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{RenderList}}\&\ \mbox{\hyperlink{class_render_list_ae8d8142c765d5e5ee55d3d70dde2bcd6}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{RenderList}}\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{RenderList}}\&\ \mbox{\hyperlink{class_render_list_ab4db41b935a4872b293562fd29fc4bd0}{operator=}}(\mbox{\hyperlink{class_render_list_a76dae02e58672ec4dadb9ea98b3d78c3}{RenderList}}\&\&\ o)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_render_list_a5385044a4818ddfda93c7413fd603eee}{pass}}(\mbox{\hyperlink{class_node}{Node}}*\ node,\ glm::mat4\ parent\_matrix);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_ad0677142acbe0d973064aa917adf0e4d}{render}}(glm::mat4\ view);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_render_list_a6f692ab357b10aeed7c8b70b47d79a42}{clear}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \ \ std::list<RenderNode*>\ \mbox{\hyperlink{class_render_list_a2accc647937af59fa2ce80a061b8d791}{get\_render\_list}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00119\ \ \ \ \ std::list<RenderNode*>\ \mbox{\hyperlink{class_render_list_aa1a3a1e2d26751ca67fb393f58224318}{m\_list}};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_render_list_a26afe61d0cf9cd41131589f537fcccce}{load\_render\_node}}(\mbox{\hyperlink{struct_render_node}{RenderNode}}*\ node);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \};}
+
+\end{DoxyCode}

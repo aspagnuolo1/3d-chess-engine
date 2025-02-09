@@ -1,0 +1,494 @@
+\doxysection{Mesh Class Reference}
+\hypertarget{class_mesh}{}\label{class_mesh}\index{Mesh@{Mesh}}
+
+
+Class for representing a 3D mesh.  
+
+
+
+
+{\ttfamily \#include $<$mesh.\+h$>$}
+
+Inheritance diagram for Mesh\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mesh}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mesh_a77432667b2edd0b56f91de43bc8e67d7}{Mesh}} (const std\+::string \&name, glm\+::mat4 cords, unsigned int faces, unsigned int vertices, \mbox{\hyperlink{class_material}{Material}} \texorpdfstring{$\ast$}{*}material=new \mbox{\hyperlink{class_material}{Material}}("{}default\+\_\+material"{}, glm\+::vec4(0.\+0f, 0.\+0f, 0.\+0f, 1.\+0f), glm\+::vec4(0.\+2f, 0.\+2f, 0.\+2f, 1.\+0f), glm\+::vec4(0.\+8f, 0.\+8f, 0.\+8f, 1.\+0f), glm\+::vec4(0.\+5f, 0.\+5f, 0.\+5f, 1.\+0f), 5.\+0f))
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_mesh_ab9f0b1f850fc4002b2711fdf918d4838}{\texorpdfstring{$\sim$}{\string~}\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_a497e06ebaf113b2e857f41669d21f4ca}{Mesh}} (const \mbox{\hyperlink{class_mesh}{Mesh}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_aebfc14591747e8e39cd2276ab348f630}{Mesh}} (\mbox{\hyperlink{class_mesh}{Mesh}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh}{Mesh}} \& \mbox{\hyperlink{class_mesh_afa4a1201291674e8d505c72c4bd76d4f}{operator=}} (const \mbox{\hyperlink{class_mesh}{Mesh}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh}{Mesh}} \& \mbox{\hyperlink{class_mesh_a6fda244ef9a217836e0d3b88563f9008}{operator=}} (\mbox{\hyperlink{class_mesh}{Mesh}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mesh_ab88e55cd8d73d6ae88119421f7e4ec16}{render}} (glm\+::mat4 model\+\_\+view)
+\begin{DoxyCompactList}\small\item\em Render the mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a40609b1407ba73cef2d6a59d587067b8}{set\+\_\+material}} (\mbox{\hyperlink{class_material}{Material}} \texorpdfstring{$\ast$}{*}material)
+\begin{DoxyCompactList}\small\item\em Set the material for the mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a865261979299f0601a0283b66d4a6f4e}{set\+\_\+all\+\_\+vertices}} (std\+::vector$<$ glm\+::vec3 $>$ all\+\_\+vertices)
+\begin{DoxyCompactList}\small\item\em Set the mesh\textquotesingle{}s vertices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a847c27ac186849b2de1a6cfc865b4900}{set\+\_\+all\+\_\+normals}} (std\+::vector$<$ glm\+::vec3 $>$ all\+\_\+normals)
+\begin{DoxyCompactList}\small\item\em Set the mesh\textquotesingle{}s normals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a07eff94868fe91fffdcde7dd90434eea}{set\+\_\+all\+\_\+texture\+\_\+coords}} (std\+::vector$<$ glm\+::vec2 $>$ all\+\_\+texture\+\_\+coords)
+\begin{DoxyCompactList}\small\item\em Set the mesh\textquotesingle{}s texture coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_a6f89054fe93a1c1dc8222c10a342884d}{set\+\_\+face\+\_\+vertices}} (std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$ face\+\_\+vertices)
+\begin{DoxyCompactList}\small\item\em Set the mesh\textquotesingle{}s face vertices. \end{DoxyCompactList}\item 
+const std\+::vector$<$ glm\+::vec3 $>$ \& \mbox{\hyperlink{class_mesh_af0907b18a5c5b561bee5d7e50c5cf024}{get\+\_\+all\+\_\+vertices}} () const
+\begin{DoxyCompactList}\small\item\em Get the mesh\textquotesingle{}s vertices. \end{DoxyCompactList}\item 
+const std\+::vector$<$ glm\+::vec3 $>$ \& \mbox{\hyperlink{class_mesh_aa3fb8332aa8b402d0a7dc0e7da3d5894}{get\+\_\+all\+\_\+normals}} () const
+\begin{DoxyCompactList}\small\item\em Get the mesh\textquotesingle{}s normals. \end{DoxyCompactList}\item 
+const std\+::vector$<$ glm\+::vec2 $>$ \& \mbox{\hyperlink{class_mesh_ad88330e5cbea8289824eeec355573d88}{get\+\_\+all\+\_\+texture\+\_\+coords}} () const
+\begin{DoxyCompactList}\small\item\em Get the mesh\textquotesingle{}s texture coordinates. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$ \& \mbox{\hyperlink{class_mesh_a779f284ebd0cd90ecba4a23cc4278662}{get\+\_\+face\+\_\+vertices}} () const
+\begin{DoxyCompactList}\small\item\em Get the mesh\textquotesingle{}s face vertices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_material}{Material}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mesh_ac658ccf33b28ce96791c8046d50b5981}{get\+\_\+material}} ()
+\begin{DoxyCompactList}\small\item\em Get the material of the mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_node}{Node}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_a1cd4d3cb8e9b12979a2b9f1fcdcd6ee4}{Node}} (const std\+::string \&name, glm\+::mat4 model\+\_\+view)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_node_aed77b31cad399c65cfda3c360dd7276e}{\texorpdfstring{$\sim$}{\string~}\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_a41c5a9971f7a56a40fe793049798583d}{Node}} (const \mbox{\hyperlink{class_node}{Node}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_a60ecfe10fa909c018112d13b2a34d614}{Node}} (\mbox{\hyperlink{class_node}{Node}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \& \mbox{\hyperlink{class_node_a79de85d18293bc065abe34ad71f78150}{operator=}} (const \mbox{\hyperlink{class_node}{Node}} \&o)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \& \mbox{\hyperlink{class_node_ac44e2af85c6105456d0867a49c68fb0e}{operator=}} (\mbox{\hyperlink{class_node}{Node}} \&\&o)=delete
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+const glm\+::mat4 \mbox{\hyperlink{class_node_ac9f85864152f4f05a59102ac038ff549}{get\+\_\+final\+\_\+matrix}} ()
+\begin{DoxyCompactList}\small\item\em Method for retrieving the node\textquotesingle{}s final matrix in World Coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_a873cf4452ca20017cfe739017617b35c}{find\+\_\+by\+\_\+id}} (const unsigned int \&id)
+\begin{DoxyCompactList}\small\item\em Method for finding a child with its id. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_node_a23dfe09e5412df3922c4efb4b3223d01}{find\+\_\+by\+\_\+name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Method for finding children with their name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_ad85fc18b9ea658f18a9da593ca709800}{set\+\_\+parent}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}parent)
+\begin{DoxyCompactList}\small\item\em Method for setting the node\textquotesingle{}s parent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_ac4753f358c42585e655702215c45a383}{add\+\_\+child}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em Method for adding a child. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_ae3053da5df0fdc450926fd3ed3ef8563}{remove\+\_\+child}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em Method for removing a child. \end{DoxyCompactList}\item 
+const unsigned int \mbox{\hyperlink{class_node_aacfb1458995a14d658d589a0254589e3}{get\+\_\+number\+\_\+of\+\_\+chilren}} ()
+\begin{DoxyCompactList}\small\item\em Method for retrieveing the number of children of the node. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+\_\+children} ()
+\item 
+void \mbox{\hyperlink{class_node_ae5076cc109a67d87bffc0b5014eb2e5f}{set\+\_\+matrix}} (glm\+::mat4 model\+\_\+view)
+\begin{DoxyCompactList}\small\item\em Setter method for the node\textquotesingle{}s model view matrix. \end{DoxyCompactList}\item 
+void {\bfseries remove\+\_\+all\+\_\+children} ()
+\item 
+const glm\+::mat4 \mbox{\hyperlink{class_node_a6436551ae6c7f5b828f06102537e962c}{get\+\_\+matrix}} ()
+\begin{DoxyCompactList}\small\item\em Getter method for the node\textquotesingle{}s model view matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_a8551a38cd9cdc013ef98aa9093e660cf}{Object}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_af0f7f5956b91b59af9220a9017415cae}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()=0
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_a3d8dc7c67d085a9fcb9a84ca8d0ab2a5}{set\+\_\+object\+\_\+name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_object_aa9a5f1a10d3393f5c469274bf214269a}{get\+\_\+object\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+const unsigned int \mbox{\hyperlink{class_object_aac0eb0ccbd223cbc910962e16de0916b}{get\+\_\+object\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s unique identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_mesh_a799580a22df1c56194e51f14efd05d6a}{m\+\_\+faces}}
+\begin{DoxyCompactList}\small\item\em The number of faces in the mesh. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_mesh_a20a37eec1d69eff7fb09318d6475f03b}{m\+\_\+vertices}}
+\begin{DoxyCompactList}\small\item\em The number of vertices in the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_material}{Material}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mesh_a84ee6b546c2c09400ab2a61f9566b19f}{m\+\_\+material}}
+\begin{DoxyCompactList}\small\item\em The material applied to the mesh. \end{DoxyCompactList}\item 
+std\+::vector$<$ glm\+::vec3 $>$ \mbox{\hyperlink{class_mesh_a4ecb214691b50de5b814fece8897e2f6}{m\+\_\+all\+\_\+vertices}}
+\begin{DoxyCompactList}\small\item\em The vertices of the mesh. \end{DoxyCompactList}\item 
+std\+::vector$<$ glm\+::vec3 $>$ \mbox{\hyperlink{class_mesh_a5985df6e4aa6c7648903068ec8e21728}{m\+\_\+all\+\_\+normals}}
+\begin{DoxyCompactList}\small\item\em The normals of the mesh. \end{DoxyCompactList}\item 
+std\+::vector$<$ glm\+::vec2 $>$ \mbox{\hyperlink{class_mesh_a61d814732097411e6c9d3fc7275e80f5}{m\+\_\+all\+\_\+texture\+\_\+coords}}
+\begin{DoxyCompactList}\small\item\em The texture coordinates of the mesh. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$ \mbox{\hyperlink{class_mesh_a24f105398023c49e099a1129822f60fd}{m\+\_\+face\+\_\+vertices}}
+\begin{DoxyCompactList}\small\item\em The vertices for each face in the mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_node}{Node}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_node_afb679f84ec475d10a2c6fafb7130dac5}{m\+\_\+parent}}
+\begin{DoxyCompactList}\small\item\em Current parent node. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_node_aa53106aecc1036cd2d9f47a2bb289a0b}{m\+\_\+children}}
+\begin{DoxyCompactList}\small\item\em Current children nodes. \end{DoxyCompactList}\item 
+glm\+::mat4 {\bfseries m\+\_\+model\+\_\+view}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_object_a50ff4bf85922f0c8ef5b9fb07e2f5846}{m\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Unique object identifier. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_a8b83c95c705d2c3ba0d081fe1710f48d}{m\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em The name of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{class_object_a0e16e1f8a34b3f086955211be94e542e}{m\+\_\+helper\+\_\+id}} = 0
+\begin{DoxyCompactList}\small\item\em Static helper for generating unique object identifiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for representing a 3D mesh. 
+
+The \doxylink{class_mesh}{Mesh} class derives from the \doxylink{class_node}{Node} class and adds functionality for handling 3D mesh data, including vertices, normals, texture coordinates, and faces. It can be rendered with its material properties and transformation matrices. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mesh_a77432667b2edd0b56f91de43bc8e67d7}\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_mesh_a77432667b2edd0b56f91de43bc8e67d7} 
+ENG\+\_\+\+API Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{glm\+::mat4}]{cords}{, }\item[{unsigned int}]{faces}{, }\item[{unsigned int}]{vertices}{, }\item[{\mbox{\hyperlink{class_material}{Material}} \texorpdfstring{$\ast$}{*}}]{material}{ = {\ttfamily new~\mbox{\hyperlink{class_material}{Material}}("{}default\+\_\+material"{},~glm\+:\+:vec4(0.0f,~0.0f,~0.0f,~1.0f),~glm\+:\+:vec4(0.2f,~0.2f,~0.2f,~1.0f),~glm\+:\+:vec4(0.8f,~0.8f,~0.8f,~1.0f),~glm\+:\+:vec4(0.5f,~0.5f,~0.5f,~1.0f),~5.0f)}}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Initializes the mesh with a name, transformation matrix, number of faces and vertices, and an optional material.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the mesh. \\
+\hline
+{\em cords} & The initial transformation matrix in object coordinates. \\
+\hline
+{\em faces} & The number of faces in the mesh. \\
+\hline
+{\em vertices} & The number of vertices in the mesh. \\
+\hline
+{\em material} & The material to be applied to the mesh. Defaults to a simple material. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_ab9f0b1f850fc4002b2711fdf918d4838}\index{Mesh@{Mesh}!````~Mesh@{\texorpdfstring{$\sim$}{\string~}Mesh}}
+\index{````~Mesh@{\texorpdfstring{$\sim$}{\string~}Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Mesh()}{\string~Mesh()}}
+{\footnotesize\ttfamily \label{class_mesh_ab9f0b1f850fc4002b2711fdf918d4838} 
+ENG\+\_\+\+API Mesh\+::\texorpdfstring{$\sim$}{\string~}\+Mesh (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deconstructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_mesh}{Mesh}} & class decostructor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_a497e06ebaf113b2e857f41669d21f4ca}\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_mesh_a497e06ebaf113b2e857f41669d21f4ca} 
+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mesh}{Mesh}} \&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor. 
+
+Deleted to prevent copying of \doxylink{class_mesh}{Mesh} instances. \Hypertarget{class_mesh_aebfc14591747e8e39cd2276ab348f630}\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_mesh_aebfc14591747e8e39cd2276ab348f630} 
+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} \&\&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Move constructor. 
+
+Deleted to prevent moving of \doxylink{class_mesh}{Mesh} instances. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mesh_aa3fb8332aa8b402d0a7dc0e7da3d5894}\index{Mesh@{Mesh}!get\_all\_normals@{get\_all\_normals}}
+\index{get\_all\_normals@{get\_all\_normals}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{get\_all\_normals()}{get\_all\_normals()}}
+{\footnotesize\ttfamily \label{class_mesh_aa3fb8332aa8b402d0a7dc0e7da3d5894} 
+const std\+::vector$<$ glm\+::vec3 $>$ ENG\+\_\+\+API \& Mesh\+::get\+\_\+all\+\_\+normals (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the mesh\textquotesingle{}s normals. 
+
+This method retrieves all the normals of the mesh.
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of all normals. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_ad88330e5cbea8289824eeec355573d88}\index{Mesh@{Mesh}!get\_all\_texture\_coords@{get\_all\_texture\_coords}}
+\index{get\_all\_texture\_coords@{get\_all\_texture\_coords}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{get\_all\_texture\_coords()}{get\_all\_texture\_coords()}}
+{\footnotesize\ttfamily \label{class_mesh_ad88330e5cbea8289824eeec355573d88} 
+const std\+::vector$<$ glm\+::vec2 $>$ ENG\+\_\+\+API \& Mesh\+::get\+\_\+all\+\_\+texture\+\_\+coords (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the mesh\textquotesingle{}s texture coordinates. 
+
+This method retrieves all the texture coordinates of the mesh.
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of all texture coordinates. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_af0907b18a5c5b561bee5d7e50c5cf024}\index{Mesh@{Mesh}!get\_all\_vertices@{get\_all\_vertices}}
+\index{get\_all\_vertices@{get\_all\_vertices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{get\_all\_vertices()}{get\_all\_vertices()}}
+{\footnotesize\ttfamily \label{class_mesh_af0907b18a5c5b561bee5d7e50c5cf024} 
+const std\+::vector$<$ glm\+::vec3 $>$ ENG\+\_\+\+API \& Mesh\+::get\+\_\+all\+\_\+vertices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the mesh\textquotesingle{}s vertices. 
+
+This method retrieves all the vertices of the mesh.
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of all vertices. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_a779f284ebd0cd90ecba4a23cc4278662}\index{Mesh@{Mesh}!get\_face\_vertices@{get\_face\_vertices}}
+\index{get\_face\_vertices@{get\_face\_vertices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{get\_face\_vertices()}{get\_face\_vertices()}}
+{\footnotesize\ttfamily \label{class_mesh_a779f284ebd0cd90ecba4a23cc4278662} 
+const std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$ ENG\+\_\+\+API \& Mesh\+::get\+\_\+face\+\_\+vertices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the mesh\textquotesingle{}s face vertices. 
+
+This method retrieves the vertices for each face of the mesh.
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of face vertices. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_ac658ccf33b28ce96791c8046d50b5981}\index{Mesh@{Mesh}!get\_material@{get\_material}}
+\index{get\_material@{get\_material}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{get\_material()}{get\_material()}}
+{\footnotesize\ttfamily \label{class_mesh_ac658ccf33b28ce96791c8046d50b5981} 
+\mbox{\hyperlink{class_material}{Material}} ENG\+\_\+\+API \texorpdfstring{$\ast$}{*} Mesh\+::get\+\_\+material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the material of the mesh. 
+
+This method retrieves the material that is applied to the mesh.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the mesh\textquotesingle{}s material. 
+\end{DoxyReturn}
+\Hypertarget{class_mesh_afa4a1201291674e8d505c72c4bd76d4f}\index{Mesh@{Mesh}!operator=@{operator=}}
+\index{operator=@{operator=}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_mesh_afa4a1201291674e8d505c72c4bd76d4f} 
+\mbox{\hyperlink{class_mesh}{Mesh}} \& Mesh\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_mesh}{Mesh}} \&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy assignment operator. 
+
+Deleted to prevent assignment of \doxylink{class_mesh}{Mesh} instances. \Hypertarget{class_mesh_a6fda244ef9a217836e0d3b88563f9008}\index{Mesh@{Mesh}!operator=@{operator=}}
+\index{operator=@{operator=}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_mesh_a6fda244ef9a217836e0d3b88563f9008} 
+\mbox{\hyperlink{class_mesh}{Mesh}} \& Mesh\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mesh}{Mesh}} \&\&}]{o}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Move assignment operator. 
+
+Deleted to prevent move assignment of \doxylink{class_mesh}{Mesh} instances. \Hypertarget{class_mesh_ab88e55cd8d73d6ae88119421f7e4ec16}\index{Mesh@{Mesh}!render@{render}}
+\index{render@{render}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_mesh_ab88e55cd8d73d6ae88119421f7e4ec16} 
+void ENG\+\_\+\+API Mesh\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{model\+\_\+view}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Render the mesh. 
+
+This function renders the mesh using Open\+GL, applying the material and the associated transformation. It iterates through the faces of the mesh, rendering each vertex along with its normal and texture coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+\_\+view} & The transformation matrix to apply to the mesh. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_node_a57e7f9c783994d82f47d4f57c1444756}{Node}}.
+
+\Hypertarget{class_mesh_a847c27ac186849b2de1a6cfc865b4900}\index{Mesh@{Mesh}!set\_all\_normals@{set\_all\_normals}}
+\index{set\_all\_normals@{set\_all\_normals}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{set\_all\_normals()}{set\_all\_normals()}}
+{\footnotesize\ttfamily \label{class_mesh_a847c27ac186849b2de1a6cfc865b4900} 
+void ENG\+\_\+\+API Mesh\+::set\+\_\+all\+\_\+normals (\begin{DoxyParamCaption}\item[{std\+::vector$<$ glm\+::vec3 $>$}]{all\+\_\+normals}{}\end{DoxyParamCaption})}
+
+
+
+Set the mesh\textquotesingle{}s normals. 
+
+This method allows for setting the normals of the mesh. The normals are stored in a vector of glm\+::vec3.
+
+
+\begin{DoxyParams}{Parameters}
+{\em all\+\_\+normals} & The list of all vertex normals in the mesh. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_a07eff94868fe91fffdcde7dd90434eea}\index{Mesh@{Mesh}!set\_all\_texture\_coords@{set\_all\_texture\_coords}}
+\index{set\_all\_texture\_coords@{set\_all\_texture\_coords}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{set\_all\_texture\_coords()}{set\_all\_texture\_coords()}}
+{\footnotesize\ttfamily \label{class_mesh_a07eff94868fe91fffdcde7dd90434eea} 
+void ENG\+\_\+\+API Mesh\+::set\+\_\+all\+\_\+texture\+\_\+coords (\begin{DoxyParamCaption}\item[{std\+::vector$<$ glm\+::vec2 $>$}]{all\+\_\+texture\+\_\+coords}{}\end{DoxyParamCaption})}
+
+
+
+Set the mesh\textquotesingle{}s texture coordinates. 
+
+This method allows for setting the texture coordinates of the mesh. The texture coordinates are stored in a vector of glm\+::vec2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em all\+\_\+texture\+\_\+coords} & The list of all texture coordinates in the mesh. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_a865261979299f0601a0283b66d4a6f4e}\index{Mesh@{Mesh}!set\_all\_vertices@{set\_all\_vertices}}
+\index{set\_all\_vertices@{set\_all\_vertices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{set\_all\_vertices()}{set\_all\_vertices()}}
+{\footnotesize\ttfamily \label{class_mesh_a865261979299f0601a0283b66d4a6f4e} 
+void ENG\+\_\+\+API Mesh\+::set\+\_\+all\+\_\+vertices (\begin{DoxyParamCaption}\item[{std\+::vector$<$ glm\+::vec3 $>$}]{all\+\_\+vertices}{}\end{DoxyParamCaption})}
+
+
+
+Set the mesh\textquotesingle{}s vertices. 
+
+This method allows for setting the vertices of the mesh. The vertices are stored in a vector of glm\+::vec3.
+
+
+\begin{DoxyParams}{Parameters}
+{\em all\+\_\+vertices} & The list of all vertex positions in the mesh. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_a6f89054fe93a1c1dc8222c10a342884d}\index{Mesh@{Mesh}!set\_face\_vertices@{set\_face\_vertices}}
+\index{set\_face\_vertices@{set\_face\_vertices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{set\_face\_vertices()}{set\_face\_vertices()}}
+{\footnotesize\ttfamily \label{class_mesh_a6f89054fe93a1c1dc8222c10a342884d} 
+void ENG\+\_\+\+API Mesh\+::set\+\_\+face\+\_\+vertices (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ unsigned int $>$ $>$}]{face\+\_\+vertices}{}\end{DoxyParamCaption})}
+
+
+
+Set the mesh\textquotesingle{}s face vertices. 
+
+This method allows for setting the vertices that make up each face of the mesh. Each face consists of a set of vertex indices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em face\+\_\+vertices} & The list of faces, where each face is represented by a set of vertex indices. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mesh_a40609b1407ba73cef2d6a59d587067b8}\index{Mesh@{Mesh}!set\_material@{set\_material}}
+\index{set\_material@{set\_material}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{set\_material()}{set\_material()}}
+{\footnotesize\ttfamily \label{class_mesh_a40609b1407ba73cef2d6a59d587067b8} 
+void ENG\+\_\+\+API Mesh\+::set\+\_\+material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_material}{Material}} \texorpdfstring{$\ast$}{*}}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Set the material for the mesh. 
+
+This method allows for assigning a new material to the mesh.
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The new material to assign to the mesh. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_mesh_a5985df6e4aa6c7648903068ec8e21728}\index{Mesh@{Mesh}!m\_all\_normals@{m\_all\_normals}}
+\index{m\_all\_normals@{m\_all\_normals}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_all\_normals}{m\_all\_normals}}
+{\footnotesize\ttfamily \label{class_mesh_a5985df6e4aa6c7648903068ec8e21728} 
+std\+::vector$<$glm\+::vec3$>$ Mesh\+::m\+\_\+all\+\_\+normals\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The normals of the mesh. 
+
+This member variable stores the normals associated with each vertex in the mesh. \Hypertarget{class_mesh_a61d814732097411e6c9d3fc7275e80f5}\index{Mesh@{Mesh}!m\_all\_texture\_coords@{m\_all\_texture\_coords}}
+\index{m\_all\_texture\_coords@{m\_all\_texture\_coords}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_all\_texture\_coords}{m\_all\_texture\_coords}}
+{\footnotesize\ttfamily \label{class_mesh_a61d814732097411e6c9d3fc7275e80f5} 
+std\+::vector$<$glm\+::vec2$>$ Mesh\+::m\+\_\+all\+\_\+texture\+\_\+coords\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The texture coordinates of the mesh. 
+
+This member variable stores the texture coordinates associated with each vertex in the mesh. \Hypertarget{class_mesh_a4ecb214691b50de5b814fece8897e2f6}\index{Mesh@{Mesh}!m\_all\_vertices@{m\_all\_vertices}}
+\index{m\_all\_vertices@{m\_all\_vertices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_all\_vertices}{m\_all\_vertices}}
+{\footnotesize\ttfamily \label{class_mesh_a4ecb214691b50de5b814fece8897e2f6} 
+std\+::vector$<$glm\+::vec3$>$ Mesh\+::m\+\_\+all\+\_\+vertices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The vertices of the mesh. 
+
+This member variable stores the positions of all vertices in the mesh. \Hypertarget{class_mesh_a24f105398023c49e099a1129822f60fd}\index{Mesh@{Mesh}!m\_face\_vertices@{m\_face\_vertices}}
+\index{m\_face\_vertices@{m\_face\_vertices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_face\_vertices}{m\_face\_vertices}}
+{\footnotesize\ttfamily \label{class_mesh_a24f105398023c49e099a1129822f60fd} 
+std\+::vector$<$std\+::vector$<$unsigned int$>$ $>$ Mesh\+::m\+\_\+face\+\_\+vertices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The vertices for each face in the mesh. 
+
+This member variable stores the indices of vertices that form each face of the mesh. \Hypertarget{class_mesh_a799580a22df1c56194e51f14efd05d6a}\index{Mesh@{Mesh}!m\_faces@{m\_faces}}
+\index{m\_faces@{m\_faces}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_faces}{m\_faces}}
+{\footnotesize\ttfamily \label{class_mesh_a799580a22df1c56194e51f14efd05d6a} 
+unsigned int Mesh\+::m\+\_\+faces\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The number of faces in the mesh. 
+
+This member variable stores the number of faces in the mesh, used for rendering. \Hypertarget{class_mesh_a84ee6b546c2c09400ab2a61f9566b19f}\index{Mesh@{Mesh}!m\_material@{m\_material}}
+\index{m\_material@{m\_material}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_material}{m\_material}}
+{\footnotesize\ttfamily \label{class_mesh_a84ee6b546c2c09400ab2a61f9566b19f} 
+\mbox{\hyperlink{class_material}{Material}}\texorpdfstring{$\ast$}{*} Mesh\+::m\+\_\+material\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The material applied to the mesh. 
+
+This member variable stores the material that defines the visual appearance of the mesh. \Hypertarget{class_mesh_a20a37eec1d69eff7fb09318d6475f03b}\index{Mesh@{Mesh}!m\_vertices@{m\_vertices}}
+\index{m\_vertices@{m\_vertices}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_vertices}{m\_vertices}}
+{\footnotesize\ttfamily \label{class_mesh_a20a37eec1d69eff7fb09318d6475f03b} 
+unsigned int Mesh\+::m\+\_\+vertices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The number of vertices in the mesh. 
+
+This member variable stores the number of vertices in the mesh, used for rendering. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mesh.\+h\item 
+mesh.\+cpp\end{DoxyCompactItemize}

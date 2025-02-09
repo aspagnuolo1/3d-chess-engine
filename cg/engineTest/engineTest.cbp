@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="engineTest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="engineTest" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="../engine" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Linker>
+			<Add library="../engine/bin/Debug/libengine.so" />
+		</Linker>
+		<Unit filename="cameraTest.cpp" />
+		<Unit filename="cameraTest.h" />
+		<Unit filename="lightTest.cpp" />
+		<Unit filename="lightTest.h" />
+		<Unit filename="mainTests.cpp" />
+		<Unit filename="materialTest.cpp" />
+		<Unit filename="materialTest.h" />
+		<Unit filename="meshTest.cpp" />
+		<Unit filename="meshTest.h" />
+		<Unit filename="nodeTest.cpp" />
+		<Unit filename="nodeTest.h" />
+		<Unit filename="textureTest.cpp" />
+		<Unit filename="textureTest.h" />
+		<Extensions>
+			<code_completion>
+				<search_path add="../dependencies" />
+			</code_completion>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

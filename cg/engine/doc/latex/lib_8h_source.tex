@@ -1,0 +1,38 @@
+\doxysection{lib.\+h}
+\hypertarget{lib_8h_source}{}\label{lib_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ VERSION\ //}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \textcolor{comment}{//\ Generic\ info:}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifdef\ \_DEBUG}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ LIB\_NAME\ \ \ \ \ \ "{}My\ Graphics\ Engine\ v0.1a\ (debug)"{}\ \ \ }}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ LIB\_NAME\ \ \ \ \ \ "{}My\ Graphics\ Engine\ v0.1a"{}\ \ \ }}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ LIB\_VERSION\ \ \ 10\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Export\ API:}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifdef\ \_WINDOWS}}
+\DoxyCodeLine{00019\ \ \ \ \textcolor{comment}{//\ Specifies\ i/o\ linkage\ (VC++\ spec):}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \#ifdef\ ENGINE\_EXPORTS}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \ \ \#define\ ENG\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \#else}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \ \ \#define\ ENG\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00024\ \ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00025\ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \_\_declspec(dllexport)\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ NvOptimusEnablement\ =\ 0x00000001;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \_\_declspec(dllexport)\ \textcolor{keywordtype}{int}\ AmdPowerXpressRequestHighPerformance\ =\ 1;}
+\DoxyCodeLine{00028\ \ \ \ \}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ }}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Get\ rid\ of\ annoying\ warnings:}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4251)\ }}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{//\ Under\ linux}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ ENG\_API}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
